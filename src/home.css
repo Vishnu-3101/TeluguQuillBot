@@ -2,14 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .chatbox {
-  width: 400px; /* Adjust as needed */
-  height: 500px; /* Adjust as needed */
+  width: 1000px; /* Adjust as needed */
+  height: 700px; /* Adjust as needed */
   border: 1px solid #ccc;
-  border-radius: 8px;
+  background-color: #fff;
+  /* border-radius: 8px; */
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -21,37 +22,111 @@
   overflow-y: auto;
 }
 
+.chatbox__input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+/* Styles for response message box */
 .chatbox__messageBox {
+  display: flex;
+  justify-content: flex-end; /* Aligns messages to the right */
   margin-bottom: 10px;
 }
 
+/* Styles for user's message */
+.chatbox__messageBox--primary {
+  background-color: #d3e0ff; /* Light blue color */
+  border-radius: 5px;
+  max-width: 70%; /* Adjust as needed */
+}
+
+/* Styles for bot's response message */
 .chatbox__message {
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #f2f2f2;
+  background-color: #e2f0cb; /* Light green color */
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 70%; /* Adjust as needed */
+  font-size: 16px;
 }
-
-.chatbox__message--primary {
-  background-color: #0084ff; /* Adjust as needed */
-  color: #fff;
-}
-
 .chatbox__inputPanel {
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-.chatbox__input {
+/* .chatbox__input {
   flex: 1;
+  width: 890px;
   padding: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-right: 10px;
-}
+} */
 
 .chatbox__input:focus {
   outline: none;
 }
 
+.side-menu {
+  width: 0;
+  height: 100%;
+  background-color: #ffffff; /* Adjust background color as needed */
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.side-menu.open {
+  width: 250px; /* Adjust width of the side menu as needed */
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+.side-menu.closed {
+  width: 0;
+}
+
+.side-menu__header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.side-menu__content {
+  flex: 1;
+}
+
+.side-menu__footer {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.profile-button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #0084ff; /* Adjust background color as needed */
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.profile-button:hover {
+  background-color: #0056b3; /* Adjust hover color as needed */
+}
 /* Add any additional styling as needed */
