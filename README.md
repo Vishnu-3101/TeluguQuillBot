@@ -1,3 +1,12 @@
+# TeluguQuillBot
+
+- output images of the project
+
+<img src="output/1.jpeg">
+<br>
+
+<img src="output/2.jpeg">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
